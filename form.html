@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>School Management</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg text-bg-info bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">WCE Student Management</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page"
+                                href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/form.html">User
+                                Registration Form</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row justify-content-md-center my-5 ">
+            <div class="card col-9">
+                <form action="" method="get" class="row g-3 was-validated" required>
+                    <h5 class="card-header">Register User</h5>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="fname" class="form-label">Full Name</label>
+                            <input type class="form-control"
+                                id="fname"
+                                placeholder="eg Siddharth Shrinivas Salunkhe"
+                                required>
+
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mobile" class="form-label">Mobile Number</label>
+                            <input type="number" class="form-control"
+                                id="mobile"
+                                placeholder="eg 1234567890"
+                                required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="idproof" class="form-label">ID Proof</label>
+                            <input type class="form-control"
+                                id="idproof"
+                                placeholder="eg Adhar or PanCard Number"
+                                required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1"
+                                class="form-label">Address</label>
+                            <textarea class="form-control"
+                                id="exampleFormControlTextarea1" rows="3"
+                                required></textarea>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control"
+                                id="email"
+                                placeholder="eg name@gmail.com"
+                                required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Select
+                                Department</label>
+                            <select class="form-select"
+                                aria-label="Default select example"
+                                id="department"
+                                required>
+                                <option selected>Open this select menu</option>
+                                <option value="1">CSE</option>
+                                <option value="2">IT</option>
+                                <option value="3">E&TC</option>
+                            </select>
+                            <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="department" class="form-label">Select
+                                Class</label>
+                            <select class="form-select"
+                                aria-label="Default select example"
+                                id="department"
+                                required>
+                                <option selected>Open this select menu</option>
+                                <option value="1">First Year</option>
+                                <option value="2">Second Year</option>
+                                <option value="3">Third Year</option>
+                            </select>
+                            <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pass" class="form-label">Create a
+                                password</label>
+                            <input type="password" class="form-control" required>
+                            <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <a href="./success.html">
+                            <button  onclick="" class="btn btn-primary">Register</button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="text-bg-success p-3 text-center">
+            All rights reserverd @WCE Management Team
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+
+        <script>
+            const calle =  ()=>{
+                alert("user registerd")
+            }
+
+
+            (() => {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                    form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                    }, false)
+                })
+            })()
+        </script>
+    </body>
+</html>
